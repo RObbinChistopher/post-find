@@ -1,4 +1,7 @@
 import './assets/main.css'
+// src/main.js
+import './assets/tailwind.css'; // Adjust path if necessary
+
 
 import { createApp } from 'vue'
 import App from './App.vue'
