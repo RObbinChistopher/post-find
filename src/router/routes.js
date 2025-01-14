@@ -8,6 +8,7 @@ import Category from "../views/Dashboard/MyAds/Category.vue";
 import profile from '../views/Dashboard/Profile.vue'
 import AddPost from '../views/Dashboard/MyAds/AddPost.vue'
 import MyAds from "../views/Dashboard/MyAds/MyAd.vue";
+import PublicProfile from "../views/Dashboard/PublicProfile.vue";
 const routes = [
     { path: '/', component: Home, name: 'Home',meta: {showPostHeader: false}},
     { path: '/items', component: productItems, name: 'productItems',meta: {showPostHeader: false}},
@@ -20,5 +21,6 @@ const routes = [
     { path: '/my-post', component: Category, name: 'Category',  meta: { showHeader: false, showFooter: false, showPostHeader: true,}},
     { path: '/ad-attributes', component: AddPost, name: 'AddPost',  meta: { showHeader: false, showFooter: false, showPostHeader: true,}},
     { path: '/my-ads', component: MyAds, name: 'MyAds',  meta: { showHeader: true, showFooter: true, showPostHeader: false,}},
+    { path: '/public-profile', component: PublicProfile, name: 'PublicProfile',  meta: { showHeader: true, showFooter: true, showPostHeader: false,}},
 ]
 export default routes;
