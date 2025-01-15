@@ -252,14 +252,14 @@
 
             <!-- Profile Dropdown Menu -->
             <div
-              v-if="isProfileVisible"
+              v-if="isProfileOpen"
               class="absolute right-36 mt-2 z-20 bg-white border border-gray-300 rounded-md w-64"
             >
               <ul class="text-sm text-gray-700">
                 <li class="px-4 py-2 cursor-pointer border-b border-gray-300">
                   <div class="flex flex-col gap-3">
                     <div class="flex items-center gap-4">
-                      <img
+                      <img 
                         src="https://www.olx.com.pk/assets/iconProfilePicture.7975761176487dc62e25536d9a36a61d.png"
                         alt=""
                         class="w-16"
@@ -273,7 +273,7 @@
                     </div>
                     <div class="flex justify-center items-center mb-2">
                       <router-link to="/edit-profile">
-                        <button
+                        <button @click="handleItemClick('View and edit your profile')"
                           class="p-2 border-2 px-4 text-xs border-primaryColor hover:outline hover:border outline-primaryColor rounded-md text-primaryColor"
                         >
                           View and edit your profile
@@ -283,8 +283,8 @@
                   </div>
                 </li>
                 <router-link to="/my-ads">
-                  <li
-                    class="px-4 py-2 hover:text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center"
+                  <li @click="handleItemClick('My ads')"
+                    class="px-4 py-2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
                   >
                     <i class="fa-solid fa-th-large mr-3"></i>
                     <!-- Icon for My Ads -->
@@ -292,52 +292,54 @@
                   </li>
                 </router-link>
 
-                <li
-                  class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                <li @click="handleItemClick('Favourites & Saved')"
+                  class="px-4 py-2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
                 >
                   <i class="fa-solid fa-heart mr-3"></i>
                   <!-- Icon for Favourites & Saved searches -->
                   Favourites & Saved
                 </li>
                 <router-link to="/public-profile">
-                  <li
-                    class="px-4 py-2 hover:text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center"
+                  <li @click="handleItemClick('Public Profile')"
+                    class="px-4 py-2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
                   >
                     <i class="fa-solid fa-user-circle mr-3"></i>
                     <!-- Icon for Public Profile -->
                     Public Profile
                   </li>
                 </router-link>
-                <li
-                  class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                <li @click="handleItemClick('Buy Discounted Packages')"
+                  class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer flex items-center"
                 >
                   <i class="fa-solid fa-gift mr-3"></i>
                   <!-- Icon for Buy Discounted Packages -->
                   Buy Discounted Packages
                 </li>
-                <li
-                  class="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-300 flex items-center"
+                <li @click="handleItemClick('Bought Packages & Billing')"
+                  class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
                 >
                   <i class="fa-solid fa-credit-card mr-3"></i>
                   <!-- Icon for Bought Packages & Billing -->
                   Bought Packages & Billing
                 </li>
-                <li
-                  class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                <li @click="handleItemClick('Help')"
+                  class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer flex items-center"
                 >
                   <i class="fa-solid fa-question-circle mr-3"></i>
                   <!-- Icon for Help -->
                   Help
                 </li>
-                <li
-                  class="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-300 flex items-center"
-                >
-                  <i class="fa-solid fa-cogs mr-3"></i>
-                  <!-- Icon for Settings -->
-                  Settings
-                </li>
-                <li
-                  class="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-300 flex items-center"
+                <router-link to="/profile-setting">
+                  <li @click="handleItemClick('Settings')"
+                    class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
+                  >
+                    <i class="fa-solid fa-cogs mr-3"></i>
+                    <!-- Icon for Settings -->
+                    Settings
+                  </li>
+                </router-link>
+                <li @click="handleItemClick('LogOut')"
+                  class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
                 >
                   <i class="fa-solid fa-sign-out-alt mr-3"></i>
                   <!-- Icon for LogOut -->
@@ -513,7 +515,7 @@ export default {
       isOpenCAt: false,
       showLoginModal: false, // Control login modal visibility
       showCreateAccount: false, // Tracks if the "Create an account" view is shown
-      isProfileVisible: false,
+      isProfileOpen: false,
     };
   },
   methods: {
@@ -527,11 +529,40 @@ export default {
       this.showLoginModal = !this.showLoginModal;
     },
     toggleProfile() {
-      this.isProfileVisible = !this.isProfileVisible; // Toggle visibility of the profile dropdown
+      this.isProfileOpen = !this.isProfileOpen; // Toggle visibility of the profile dropdown
     },
     toggleNotification() {
       this.isNotificationOpen = !this.isNotificationOpen; // Toggle dropdown visibility
     },
+    handleClickAnywhere(event) {
+      this.closeDropdown(event);
+    },
+
+   // Close the dropdown by changing the state
+   closeDropdown() {
+      this.isProfileOpen = false;
+    },
+
+    handleItemClick(event) {
+        // Handle click on an item inside the dropdown
+        // For example, you can close the dropdown and do something with the selected item
+        const selectedItem = event.target;
+
+        // Close the dropdown
+        this.closeDropdown();
+
+        // You can do something with the selected item here, for example:
+        console.log('Item selected:', selectedItem);
+    }
+  
+  },
+  mounted() {
+    // Add event listener to handle clicks outside the profile dropdown
+    document.addEventListener('click', (event) => this.handleClickAnyWhere(event));
+  },
+  beforeDestroy() {
+    // Clean up the event listener when the component is destroyed
+    document.removeEventListener('click', this.handleClickAnyWhere.bind(this));
   },
 };
 </script>
