@@ -9,6 +9,7 @@ import profile from '../views/Dashboard/Profile.vue'
 import AddPost from '../views/Dashboard/MyAds/AddPost.vue'
 import MyAds from "../views/Dashboard/MyAds/MyAd.vue";
 import PublicProfile from "../views/Dashboard/PublicProfile.vue";
+import ProfileSetting from "../views/Dashboard/ProfileSetting.vue"
 const routes = [
     { path: '/', component: Home, name: 'Home',meta: {showPostHeader: false}},
     { path: '/items', component: productItems, name: 'productItems',meta: {showPostHeader: false}},
@@ -22,5 +23,6 @@ const routes = [
     { path: '/ad-attributes', component: AddPost, name: 'AddPost',  meta: { showHeader: false, showFooter: false, showPostHeader: true,}},
     { path: '/my-ads', component: MyAds, name: 'MyAds',  meta: { showHeader: true, showFooter: true, showPostHeader: false,}},
     { path: '/public-profile', component: PublicProfile, name: 'PublicProfile',  meta: { showHeader: true, showFooter: true, showPostHeader: false,}},
+    { path: '/profile-setting', component: ProfileSetting, name: 'ProfileSetting',  meta: { showHeader: true, showFooter: true, showPostHeader: false,}},
 ]
 export default routes;
