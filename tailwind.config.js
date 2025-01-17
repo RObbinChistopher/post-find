@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryColor: '#5B7B7F',
+        primaryColor: '#517472',
       },
       animation: {
         blink: 'blink 1s infinite', // Custom blinking animation
