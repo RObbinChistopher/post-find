@@ -41,7 +41,7 @@
             <div><h1 class="font-bold">Show my phone number in ads</h1></div>
             <div class="form-check form-switch">
               <input
-                class="form-check-input bg-primaryColor border-2 rounded-full transition-all duration-300 ease-in-out focus:outline-none"
+                class="form-check-input toogle-btn"
                 type="checkbox"
                 id="flexSwitchCheckDefault"
               />
@@ -58,9 +58,9 @@
             <!-- Password Input -->
             <div class="mb-4 px-4 pt-6">
               <input
-                type="password"
-                class="w-full p-3 border-1 border-primaryColor rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter password"
+                class="form-check-input toogle-btn"
+                type="checkbox"
+                id="flexSwitchCheckDefault"
               />
               <p class="text-sm text-gray-500/70 mt-2">
                 Use a minimum of 8 characters with at least 1 number, 1 special
@@ -71,9 +71,9 @@
             <!-- Confirm Password Input -->
             <div class="mb-4 px-4">
               <input
-                type="password"
-                class="w-full p-3 border-1 border-primaryColor rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Confirm password"
+                class="form-check-input toogle-btn"
+                type="checkbox"
+                id="flexSwitchCheckDefault"
               />
             </div>
             <div class="flex justify-start px-4">
@@ -105,7 +105,7 @@
             </div>
             <div class="form-check form-switch">
               <input
-                class="form-check-input bg-primaryColor border-2 rounded-full transition-all duration-300 ease-in-out focus:outline-none"
+                class="form-check-input toogle-btn"
                 type="checkbox"
                 id="flexSwitchCheckDefault"
               />
@@ -120,7 +120,7 @@
               ></div>
             <div class="form-check form-switch">
               <input
-                class="form-check-input bg-primaryColor border-2 rounded-full transition-all duration-300 ease-in-out focus:outline-none"
+                class="form-check-input toogle-btn"
                 type="checkbox"
                 id="flexSwitchCheckDefault"
               />
@@ -135,7 +135,7 @@
               ></div>
             <div class="form-check form-switch">
               <input
-                class="form-check-input bg-primaryColor border-2 rounded-full transition-all duration-300 ease-in-out focus:outline-none"
+                class="form-check-input toogle-btn"
                 type="checkbox"
                 id="flexSwitchCheckDefault"
               />
@@ -163,5 +163,8 @@ export default {
 </script>
 
 <style scoped>
-/* Add any custom styling here if needed */
+.toogle-btn{
+  width: 2.8rem !important;
+  padding: 10px !important;
+}
 </style>

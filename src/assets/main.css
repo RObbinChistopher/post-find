@@ -4,7 +4,11 @@
   --pcolor: #39514f;
   --scolor: #7654a2;
 }
-
+@media (min-width: 1280px) {
+  .container {
+      max-width: 1300px !important;
+  }
+}
 input:focus {
   border-color: #517472 !important;
 }
@@ -49,6 +53,7 @@ select {
 .text {
   font-size: 15px;
   font-weight: 700;
+  color: black;
 }
 
 .header2 {

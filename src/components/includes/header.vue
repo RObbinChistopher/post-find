@@ -258,7 +258,7 @@
               <ul class="text-sm text-gray-700">
                 <li class="px-4 py-2 cursor-pointer border-b border-gray-300">
                   <div class="flex flex-col gap-3">
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2">
                       <img 
                         src="https://www.olx.com.pk/assets/iconProfilePicture.7975761176487dc62e25536d9a36a61d.png"
                         alt=""
@@ -267,14 +267,14 @@
                       <div
                         class="flex justify-center items-start flex-col gap-1"
                       >
-                        <h1>Hello,</h1>
-                        <h1 class="text-xl">Anas Tariq</h1>
+                        <p class="text2">Hello,</p>
+                        <h1 class="text">Anas Tariq<br><span class="text2 mt-4">robbinc042@gmail.com</span></h1>
                       </div>
                     </div>
                     <div class="flex justify-center items-center mb-2">
                       <router-link to="/edit-profile">
                         <button @click="handleItemClick('View and edit your profile')"
-                          class="p-2 border-2 px-4 text-xs border-primaryColor hover:outline hover:border outline-primaryColor rounded-md text-primaryColor"
+                          class="p-2 border-2 text2 font-black border-primaryColor hover:outline hover:border outline-primaryColor rounded-md text-primaryColor"
                         >
                           View and edit your profile
                         </button>
@@ -284,7 +284,7 @@
                 </li>
                 <router-link to="/my-ads">
                   <li @click="handleItemClick('My ads')"
-                    class="px-4 py-2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
+                    class="px-4 py-2 text2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
                   >
                     <i class="fa-solid fa-th-large mr-3"></i>
                     <!-- Icon for My Ads -->
@@ -293,7 +293,7 @@
                 </router-link>
 
                 <li @click="handleItemClick('Favourites & Saved')"
-                  class="px-4 py-2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
+                  class="px-4 py-2 text2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
                 >
                   <i class="fa-solid fa-heart mr-3"></i>
                   <!-- Icon for Favourites & Saved searches -->
@@ -301,7 +301,7 @@
                 </li>
                 <router-link to="/public-profile">
                   <li @click="handleItemClick('Public Profile')"
-                    class="px-4 py-2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
+                    class="px-4 py-2 text2 hover:text-primaryColor hover:bg-gray-100 cursor-pointer flex items-center"
                   >
                     <i class="fa-solid fa-user-circle mr-3"></i>
                     <!-- Icon for Public Profile -->
@@ -309,21 +309,21 @@
                   </li>
                 </router-link>
                 <li @click="handleItemClick('Buy Discounted Packages')"
-                  class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer flex items-center"
+                  class="px-4 py-2 text2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer flex items-center"
                 >
                   <i class="fa-solid fa-gift mr-3"></i>
                   <!-- Icon for Buy Discounted Packages -->
                   Buy Discounted Packages
                 </li>
                 <li @click="handleItemClick('Bought Packages & Billing')"
-                  class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
+                  class="px-4 py-2 text2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
                 >
                   <i class="fa-solid fa-credit-card mr-3"></i>
                   <!-- Icon for Bought Packages & Billing -->
                   Bought Packages & Billing
                 </li>
                 <li @click="handleItemClick('Help')"
-                  class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer flex items-center"
+                  class="px-4 py-2 text2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer flex items-center"
                 >
                   <i class="fa-solid fa-question-circle mr-3"></i>
                   <!-- Icon for Help -->
@@ -331,7 +331,7 @@
                 </li>
                 <router-link to="/profile-setting">
                   <li @click="handleItemClick('Settings')"
-                    class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
+                    class="px-4 py-2 text2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
                   >
                     <i class="fa-solid fa-cogs mr-3"></i>
                     <!-- Icon for Settings -->
@@ -339,7 +339,7 @@
                   </li>
                 </router-link>
                 <li @click="handleItemClick('LogOut')"
-                  class="px-4 py-2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
+                  class="px-4 py-2 text2 hover:bg-gray-100 hover:text-primaryColor cursor-pointer border-b border-gray-300 flex items-center"
                 >
                   <i class="fa-solid fa-sign-out-alt mr-3"></i>
                   <!-- Icon for LogOut -->
