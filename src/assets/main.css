@@ -9,6 +9,9 @@
       max-width: 1300px !important;
   }
 }
+hr{
+  margin: 1rem 0 !important;
+}
 input:focus {
   border-color: #517472 !important;
 }

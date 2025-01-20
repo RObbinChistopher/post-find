@@ -26,6 +26,11 @@
             </div>
         </div>
         <Card />
+
+        <div class="flex justify-center">
+            <img src="https://s2.adform.net/Banners/67452213/67452213.jpg?bv=2" alt="">
+        </div>
+        
     </div>
 </template>
 
